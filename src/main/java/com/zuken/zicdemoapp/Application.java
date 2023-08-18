@@ -1,17 +1,18 @@
 package com.zuken.zicdemoapp;
 
-import java.io.FileReader;
 import java.io.IOException;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import org.apache.maven.model.io.xpp3.MavenXpp3Reader;
-import org.codehaus.plexus.util.xml.pull.XmlPullParserException;
 
 public class Application extends javafx.application.Application {
 
-  private static final String APP_TITLE = "Demo app";
+  private static final String APP_VERSION = "_undefined";
+
+  private static final String APP_TITLE = "_undefined";
+
+  private static final String LABEL_COLOR = "RED";
 
   public static void main(String[] args) {
 
@@ -36,16 +37,18 @@ public class Application extends javafx.application.Application {
 
   private void setupMain(MainController controller) {
     controller.setVersion(getMavenVersion());
-    controller.setColor("RED");
+    controller.setColor(LABEL_COLOR);
   }
 
   private String getMavenVersion() {
-    try {
-      MavenXpp3Reader reader = new MavenXpp3Reader();
-      return reader.read(new FileReader("pom.xml")).getVersion();
-    } catch (IOException | XmlPullParserException e) {
-      e.printStackTrace();
-      return "Could not get version:\n\n" + e.getMessage();
-    }
+    return APP_VERSION;
+    // note does not work with .exe launch4j
+//    try {
+//      MavenXpp3Reader reader = new MavenXpp3Reader();
+//      return reader.read(new FileReader("pom.xml")).getVersion();
+//    } catch (IOException | XmlPullParserException e) {
+//      e.printStackTrace();
+//      return "Could not get version:\n\n" + e.getMessage();
+//    }
   }
 }

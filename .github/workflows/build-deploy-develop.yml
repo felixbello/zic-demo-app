@@ -33,4 +33,5 @@ jobs:
             -   name: Build and upload artifact
                 run: |
                     sh scripts/change_app_title.sh "Demo App DEVELOP"
+                    sh scripts/assign-app-version.sh 
                     sh scripts/build-and-upload.sh "http://tools-central-service.internal.cloud.zuken.ch:9023"
