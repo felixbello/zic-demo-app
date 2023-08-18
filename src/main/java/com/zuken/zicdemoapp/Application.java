@@ -11,6 +11,8 @@ import org.codehaus.plexus.util.xml.pull.XmlPullParserException;
 
 public class Application extends javafx.application.Application {
 
+  private static final String APP_TITLE = "Demo app";
+
   public static void main(String[] args) {
 
     launch(args);
@@ -23,8 +25,13 @@ public class Application extends javafx.application.Application {
     BorderPane main = loader.load();
     setupMain(loader.getController());
     Scene primaryScene = new Scene(main);
+    stage.setTitle(getTitle());
     stage.setScene(primaryScene);
     stage.show();
+  }
+
+  private String getTitle() {
+    return APP_TITLE;
   }
 
   private void setupMain(MainController controller) {
