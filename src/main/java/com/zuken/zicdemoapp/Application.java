@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 
 public class Application extends javafx.application.Application {
 
-  private static final String APP_VERSION = "_undefined";
+  private static final String APP_VERSION = "_will_be_assigned_with_mvn_build";
 
   private static final String APP_TITLE = "_undefined";
 
