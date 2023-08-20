@@ -6,7 +6,7 @@
 
     <groupId>com.zuken</groupId>
     <artifactId>zicdemoapp</artifactId>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.4-SNAPSHOT</version>
     <name>ZIC Demo App</name>
 
     <properties>
