@@ -12,7 +12,7 @@ public class Application extends javafx.application.Application {
 
   private static final String APP_TITLE = "_undefined";
 
-  private static final String LABEL_COLOR = "BLUE";
+  private static final String LABEL_COLOR = "RED";
 
   public static void main(String[] args) {
 
