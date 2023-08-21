@@ -8,7 +8,7 @@
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" layoutX="47.0" layoutY="21.0" prefHeight="63.0" prefWidth="191.0" text="Demo app for Release to Testers" textAlignment="CENTER" />
+            <Label alignment="CENTER" layoutX="47.0" layoutY="21.0" prefHeight="63.0" prefWidth="191.0" text="Demo app for Tobi Example" textAlignment="CENTER" />
             <Label fx:id="versionLabel" alignment="CENTER" layoutY="78.0" prefHeight="229.0" prefWidth="300.0" text="_version" wrapText="true" />
             <Label fx:id="colorLabel" alignment="CENTER" layoutX="73.0" layoutY="290.0" prefHeight="80.0" prefWidth="140.0" text="Color" />
          </children>
