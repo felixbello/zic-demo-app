@@ -1,5 +1,5 @@
 name:  build and deploy to early-tester-server
-run-name: Deploying from [${{ github.head_ref }}] to [${{ github.base_name }}]
+run-name: Deploying from [${{ github.head_ref }}] to [early-tester]
 
 on:
     pull_request_target:
