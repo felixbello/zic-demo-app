@@ -1,4 +1,4 @@
-name:  build and deploy to dev-server
+name:  build and deploy to early-tester-server
 
 on:
     pull_request_target:
@@ -34,4 +34,4 @@ jobs:
                 run: |
                     sh scripts/change-app-title.sh "Demo App TESTER"
                     sh scripts/assign-app-version.sh 
-                    sh scripts/build-and-upload.sh "http://tools-central-service.internal.cloud.zuken.ch:9023" "demo-app"
+                    sh scripts/build-and-upload.sh "http://tools-central-service.internal.cloud.zuken.ch:9022" "demo-app"
