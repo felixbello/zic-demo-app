@@ -1,4 +1,5 @@
 name: test and build feature branch
+run-name: Test and build feature ${{ github.head_ref }} ${{ github.event.head_commit.message }
 
 on:
   push:
