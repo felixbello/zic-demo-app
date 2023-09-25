@@ -35,4 +35,4 @@ jobs:
                 run: |
                     sh scripts/change-app-title.sh "Demo App TESTER"
                     sh scripts/assign-app-version.sh 
-                    sh scripts/build-and-upload.sh "http://tools-central-service.internal.cloud.zuken.ch:9022" "demo-app"
+                    sh scripts/build-and-upload.sh "http://tools-central-service.early-tester.internal.cloud.zuken.ch:9022" "demo-app"
