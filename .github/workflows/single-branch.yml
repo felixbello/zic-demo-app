@@ -1,12 +1,13 @@
-name:  build and deploy to dev-server
-run-name: Deploying from [${{ github.head_ref }}] to [develop]
+name:  test and build on a separate branch
 
 on:
-    pull_request_target:
-        types:
-            - closed
-        branches:
-            - 'develop'
+  push:
+    branches:
+      - '**'
+      - '!main'
+      - '!quality'
+      - '!develop'
+      - '!early-tester'
 
 jobs:
     deploy:
@@ -34,5 +35,4 @@ jobs:
             -   name: Build and upload artifact
                 run: |
                     sh scripts/change-app-title.sh "Demo App DEVELOP"
-                    sh scripts/assign-app-version.sh 
-                    sh scripts/build-and-upload.sh "http://tools-central-service-develop.internal.cloud.zuken.ch:8080" "demo-app"
+                    sh scripts/build-and-upload.sh "http://tools-central-service.internal.cloud.zuken.ch:9023" "demo-app"
